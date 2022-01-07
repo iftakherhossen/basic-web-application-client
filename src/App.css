@@ -89,7 +89,9 @@
   align-items: center;
 }
 
-.displayActivity {}
+.displayActivity {
+  padding: 0 2rem;
+}
 
 .notFoundWrapper {
   height: 100vh;

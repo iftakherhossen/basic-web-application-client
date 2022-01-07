@@ -6,8 +6,9 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const Home = () => {
     const { user, logOut } = useAuth();
-    // const lastLogin = user?.metadata?.lastSignInTime;
-
+    const lastLogin = user;
+    console.log(lastLogin)
+    
     return (
         <div>
             <Container>
@@ -23,11 +24,10 @@ const Home = () => {
                     </Box>
                     <Box className="activityWrapper">
                         <Box className="txtBox">
-                            <ChevronRightIcon /> &nbsp; <Typography variant="h5"> Login Info</Typography>
+                            <ChevronRightIcon sx={{ color: '#80D8F7'}} /> &nbsp; <Typography variant="h5"> Login Info</Typography>
                         </Box>
                         <Box className="displayActivity">
-                            <h4>{user.displayName}</h4>
-                            <h4>refat</h4>
+                            <h3>● <span style={{ color: '#80D8F7' }}>{user.displayName}</span> last login at</h3>
                         </Box>
                     </Box>
                 </Box>
