@@ -4,10 +4,10 @@ import { Navigate, useLocation } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const PrivateRoute = ({ children, ...rest }) => {
-    const { user, isLoading } = useAuth();
+    const { user, isloading } = useAuth();
     let location = useLocation();
-    
-    if (isLoading) {
+
+    if (isloading) {
         return (
             <Container className="text-center pt-5">
                 <CircularProgress />

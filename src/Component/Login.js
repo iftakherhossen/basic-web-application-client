@@ -21,7 +21,6 @@ const Login = () => {
     const handleLogin = e => {
         loginUser(loginData.email, loginData.password, navigate);
         setOpen(true);
-
         e.preventDefault();
     }
     const handleClose = (event, reason) => {
@@ -57,6 +56,7 @@ const Login = () => {
                                     <form onSubmit={handleLogin}>
                                         <TextField
                                             id="standard-email"
+                                            name="email"
                                             type="email"
                                             required
                                             label="Email Address"
@@ -67,6 +67,7 @@ const Login = () => {
                                         <TextField
                                             id="standard-phone"
                                             type="password"
+                                            name="password"
                                             required
                                             label="Password"
                                             variant="standard"
@@ -83,11 +84,11 @@ const Login = () => {
                                     Welcome, {user.displayName}
                                 </Alert>
                             </Snackbar>
-                            <Snackbar open={open} autoHideDuration={6000} action={action}>
+                            {authError && <Snackbar open={open} autoHideDuration={6000} action={action}>
                                 <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
                                     {authError}
                                 </Alert>
-                            </Snackbar>
+                            </Snackbar>}
                         </Box>
                     </Grid>
                 </Grid>

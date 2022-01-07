@@ -27,8 +27,8 @@ const useFirebase = () => {
                 updateProfile(auth.currentUser, {
                     displayName: fName + ' ' + lName
                 })
-                    .then(() => {})
-                    .catch((error) => {});
+                    .then(() => { })
+                    .catch((error) => { });
                 navigate("/home");
             })
             .catch((error) => {
@@ -50,7 +50,6 @@ const useFirebase = () => {
             .finally(() => setLoading(false));
     }
 
-    //observe user state
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -81,7 +80,6 @@ const useFirebase = () => {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(user)
-
         })
             .then(res => res.json())
             .then(data => console.log(data));

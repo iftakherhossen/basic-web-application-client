@@ -19,7 +19,8 @@ function App() {
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/newUserRegistration" element={<Registration />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home" element={<PrivateRoute>
+            <Home /></PrivateRoute>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

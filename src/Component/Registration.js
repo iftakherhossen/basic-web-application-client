@@ -17,12 +17,10 @@ const Registration = () => {
         const newRegistrationData = { ...registrationData };
         newRegistrationData[field] = value;
         setRegistrationData(newRegistrationData);
-        console.log(newRegistrationData);
     }
     const handleRegister = e => {
         registerUser(registrationData.fName, registrationData.lName, registrationData.email, registrationData.phone, registrationData.password, navigate);
         setOpen(true);
-
         e.preventDefault();
     }
     const handleClose = (event, reason) => {
