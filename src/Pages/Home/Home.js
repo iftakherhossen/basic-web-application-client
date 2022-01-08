@@ -33,8 +33,8 @@ const Home = () => {
                         </Box>
                         <Box className="displayActivity">
                             <Box sx={{ fontSize: '1.15em', my: 2, display: 'flex', justifyContent: 'space-between' }}>
-                                <span style={{ color: '#80D8F7' }}>{user.displayName} last logged in </span>
-                                <span>{date} at {time}</span>
+                                <span>Last logged in </span>
+                                <span style={{ color: '#80D8F7' }}>{date} at {time}</span>
                             </Box>
                         </Box>
                     </Box>
